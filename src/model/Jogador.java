@@ -1,8 +1,14 @@
 package model;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.sql.Statement;
+
 public class Jogador extends Personagem implements interfaces.IJogador{
     private int vida;
     private Skin skin;
-
+    private Statement mysqStatement = null;       
+       
     @Override
     public void chorar() {
     }
@@ -26,6 +32,18 @@ public class Jogador extends Personagem implements interfaces.IJogador{
 
     public void setSkin(Skin skin) {
         this.skin = skin;
+    }
+    
+    public void salvar(){
+        String insert = "insert into jogador (nome_joogador, lugar_jogador, acao_jogador, skin_jogador) "
+                + "values ('"+ getNome() +"', '" + getLugar() +"', '"+ getAcao() +"','"+ getSkin() +"')";
+        mysqStatement = ConexaoDB.getStatement();
+        try {
+            mysqStatement.executeUpdate(insert);
+            
+        } catch (SQLException ex) {
+            ex.printStackTrace();            
+        }
     }
     
        
