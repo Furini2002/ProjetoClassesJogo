@@ -6,8 +6,8 @@ public class Lugar {
     private Lugar leste;
     private Lugar oeste;
     private Lugar sul;
-    private Personagem personagens;
-    private String mensagens;
+    private Personagem personagens[];
+    private String mensagens[];
 
     public String getDescricao() {
         return descricao;
@@ -49,21 +49,21 @@ public class Lugar {
         this.sul = sul;
     }
 
-    public Personagem getPersonagens() {
+    public Personagem[] getPersonagens() {
         return personagens;
     }
 
-    public void setPersonagens(Personagem personagens) {
+    public void setPersonagens(Personagem[] personagens) {
         this.personagens = personagens;
     }
 
-    public String getMensagens() {
+    public String[] getMensagens() {
         return mensagens;
     }
 
-    public void setMensagens(String mensagens) {
+    public void setMensagens(String[] mensagens) {
         this.mensagens = mensagens;
-    }
+    }    
     
     @Override
     public String toString() {

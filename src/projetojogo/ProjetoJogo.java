@@ -1,20 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package projetojogo;
 
-/**
- *
- * @author aluno
- */
-public class ProjetoJogo {
+import view.TelaMenu;
 
-    /**
-     * @param args the command line arguments
-     */
+public class ProjetoJogo {
     public static void main(String[] args) {
-        // TODO code application logic here
+        TelaMenu menu = new TelaMenu();
+        menu.setVisible(true);
     }
     
 }

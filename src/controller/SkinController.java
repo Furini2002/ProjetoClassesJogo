@@ -17,7 +17,8 @@ public class SkinController implements interfaces.ISkin{
 
     @Override
     public boolean salvar() {
-         return false;
+        skin.salvar();
+        return false;
     }
 
     @Override
